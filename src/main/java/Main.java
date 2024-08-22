@@ -27,6 +27,7 @@ public class Main {
         while(heap.size() > 1){
             HeapNode<String> left = heap.poll();
             HeapNode<String> right = heap.poll();
+            assert left != null;
             assert right != null;
             HeapNode<String> parent = new HeapNode<>(left.value + right.value, left.frequency + right.frequency);
             parent.left = left;
